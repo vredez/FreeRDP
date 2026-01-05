@@ -36,7 +36,7 @@
       pkgs.mkShell {
         inherit name;
         inherit (freerdp-vredez) buildInputs;
-        nativeBuildInputs = freerdp-vredez.nativeBuildInputs ++ (with pkgs; [clang-tools]);
+        nativeBuildInputs = freerdp-vredez.nativeBuildInputs ++ (with pkgs; [ccache clang-tools]);
         shellHook = ''
           export NIX_SHELL=${name}
         '';
